@@ -10,7 +10,7 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
         const encoded = await image.encode();
 
         const target = await Deno.readFile('./tests/targets/invert.png');
-        if (!equals(encoded, target)) process.exit(1);
+        if (!equals(encoded, target)) Deno.exit(1);
     }
 
     {
@@ -21,7 +21,7 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
         const encoded = await image.encode();
 
         const target = await Deno.readFile('./tests/targets/invert-value.png');
-        if (!equals(encoded, target)) process.exit(1);
+        if (!equals(encoded, target)) Deno.exit(1);
     }
 
     {
@@ -32,7 +32,7 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
         const encoded = await image.encode();
 
         const target = await Deno.readFile('./tests/targets/invert-saturation.png');
-        if (!equals(encoded, target)) process.exit(1);
+        if (!equals(encoded, target)) Deno.exit(1);
     }
 
     {
@@ -43,7 +43,7 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
         const encoded = await image.encode();
 
         const target = await Deno.readFile('./tests/targets/invert-hue.png');
-        if (!equals(encoded, target)) process.exit(1);
+        if (!equals(encoded, target)) Deno.exit(1);
     }
 
     {
@@ -54,6 +54,6 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
         const encoded = await image.encode();
 
         const target = await Deno.readFile('./tests/targets/invert-hueshift.png');
-        if (!equals(encoded, target)) process.exit(1);
+        if (!equals(encoded, target)) Deno.exit(1);
     }
 })();

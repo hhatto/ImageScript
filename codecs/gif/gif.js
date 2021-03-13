@@ -28,6 +28,10 @@ class mem {
   }
 }
 
+export function load(buffer) {
+  return [...new Decoder(buffer).frames()];
+}
+
 export class Encoder {
   constructor(width, height, loops = -1) {
     this.slices = [];
@@ -40,8 +44,7 @@ export class Encoder {
   }
 
   free() {
-    this.ptr = wasm.encoder_free(this.ptr);
-    streams.delete(0);
+    this.ptr = wasm.encoder_free(this.ptr); streams.delete(0);
   }
 
   u8() {

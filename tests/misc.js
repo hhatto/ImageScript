@@ -3,7 +3,7 @@ import {equals} from "https://deno.land/std@0.80.0/bytes/mod.ts";
 
 const panic = msg => {
     console.error(msg);
-    process.exit(1);
+    Deno.exit(1);
 }
 
 try {

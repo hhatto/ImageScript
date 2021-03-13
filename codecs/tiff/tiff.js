@@ -8,6 +8,10 @@ let wasm;
   wasm = instance.exports;
 }
 
+export function load(buffer) {
+  return decode(buffer);
+}
+
 class mem {
   static alloc(size) { return wasm.walloc(size); }
   static free(ptr, size) { return wasm.wfree(ptr, size); }

@@ -21,6 +21,13 @@ class mem {
   }
 }
 
+export function load(buffer, fit) {
+  if (!fit) return rasterize(buffer, 0, 0);
+  if (fit.zoom) return rasterize(buffer, 1, fit.zoom);
+  if (fit.width) return rasterize(buffer, 2, fit.width);
+  if (fit.height) return rasterize(buffer, 3, fit.height);
+}
+
 export function rasterize(buffer, fit, scale) {
   const bptr = mem.alloc(buffer.length);
   mem.u8(bptr, buffer.length).set(buffer);
