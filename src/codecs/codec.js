@@ -1,7 +1,7 @@
 // reference codec struct
 
 // dyn = Image or Frames<Frame>
-// opts = Object & { limit?: u32 (bytes) | { width?: u32, height?: u32 } }
+// opts = Object & { limit?: { width?: u32, height?: u32 } }
 
 // is() -> bool
 // init() -> ()

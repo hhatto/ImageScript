@@ -15,6 +15,8 @@ import framebuffer from './src/framebuffer.ts';
 
 // TODO: dynamically load builtin codecs? (idle builtin codec overhead 1mb stack + heap) (discard instance after gc/ttl?)
 
-export class Frame {}
+// TODO: codecs: copy or not
+
 export class Image extends framebuffer {}
 export class Frames<Frame> extends Array {}
+export class Frame { x = 0; y = 0; delay = 0; }
