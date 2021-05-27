@@ -1485,7 +1485,7 @@ export class GIF extends Array {
     }
 }
 
-class TextLayout {
+export class TextLayout {
     /**
      * Layout options for {@link renderText}
      * @param {object} options
